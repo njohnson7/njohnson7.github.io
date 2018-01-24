@@ -1,0 +1,80 @@
+@import url('whitespace-reset.css');
+html,
+body {
+  background: #000;
+  color:      #eee;
+  font:       normal 16px Helvetica, Arial, sans-serif;
+}
+.column {
+  background: #222;
+  margin:     6% auto;
+  max-width:  1000px;
+  min-width:  600px;
+  padding:    2%;
+}
+img {
+  display: block;
+  width:   100%;
+}
+.primary-row {
+  margin-top: 2%;
+}
+.primary-row img {
+  border: 1rem solid #333;
+}
+.primary-row img + img {
+  display: none;
+}
+h1 {
+  font-size:   32px;
+  font-weight: bold;
+  margin-top:  2%;
+  text-align:  center;
+}
+figure {
+  margin-top: 1%;
+  position:   relative;
+}
+figcaption {
+  margin-top: 1%;
+}
+.sub-row {
+  margin-top: 3%;
+}
+.sub-row ul {
+  font-size:    0;
+  margin-right: -3%;
+}
+.sub-row li {
+  display:       inline-block;
+  padding-right: 3%;
+  width:         25%;
+}
+.sub-row img {
+  border: .3rem solid #333;
+}
+.sub-row img:hover {
+  border: .3rem solid #666;
+  cursor: pointer;
+}
+.sub-row img.active {
+  border-color: #33b5e5;
+}
+.controls {
+  color:           rgba(255, 255, 255, .2);
+  display:         none;
+  font-size:       80px;
+  position:        absolute;
+  top:             45%;
+  text-decoration: none;
+  z-index:         5;
+}
+.controls:hover {
+  color: #33b5e5;
+}
+.controls.previous {
+  left: 30px;
+}
+.controls.next {
+  right: 30px;
+}
