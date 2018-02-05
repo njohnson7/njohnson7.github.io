@@ -1,80 +1,118 @@
 @import url('whitespace-reset.css');
-html,
-body {
-  background: #000;
-  color:      #eee;
-  font:       normal 16px Helvetica, Arial, sans-serif;
+body,
+input,
+button {
+  background:      #000;
+  caret-color:     #15f4ee;
+  color:           #eee;
+  font:            normal 20px Helvetica, Arial, sans-serif;
 }
-.column {
-  background: #222;
-  margin:     6% auto;
-  max-width:  1000px;
-  min-width:  600px;
-  padding:    2%;
+main {
+  background:      #151515;
+  margin:          15px auto;
+  padding:         30px;
+  width:           860px;
 }
-img {
-  display: block;
-  width:   100%;
-}
-.primary-row {
-  margin-top: 2%;
-}
-.primary-row img {
-  border: 1rem solid #333;
-}
-.primary-row img + img {
-  display: none;
-}
-h1 {
-  font-size:   32px;
-  font-weight: bold;
-  margin-top:  2%;
-  text-align:  center;
-}
-figure {
-  margin-top: 1%;
-  position:   relative;
-}
-figcaption {
-  margin-top: 1%;
-}
-.sub-row {
-  margin-top: 3%;
-}
-.sub-row ul {
-  font-size:    0;
-  margin-right: -3%;
-}
-.sub-row li {
-  display:       inline-block;
-  padding-right: 3%;
-  width:         25%;
-}
-.sub-row img {
-  border: .3rem solid #333;
-}
-.sub-row img:hover {
-  border: .3rem solid #666;
-  cursor: pointer;
-}
-.sub-row img.active {
-  border-color: #33b5e5;
+.canvas {
+  background:      linear-gradient(#444, #000);
+  content:         '';
+  height:          600px;
+  margin:          0 auto;
+  position:        relative;
+  width:           800px;
 }
 .controls {
-  color:           rgba(255, 255, 255, .2);
-  display:         none;
-  font-size:       80px;
-  position:        absolute;
-  top:             45%;
+  margin:          20px 0;
+}
+a {
+  color:           #33b5e5;
   text-decoration: none;
-  z-index:         5;
 }
-.controls:hover {
-  color: #33b5e5;
+a:hover {
+  color:           #eee;
+  font-weight:     bold;
 }
-.controls.previous {
-  left: 30px;
+a + a {
+  border-left:     2px solid #555;
+  margin-left:     4px;
+  padding-left:    8px;
 }
-.controls.next {
-  right: 30px;
+.clear:hover {
+  color:           #ff3232;
+}
+.add {
+  margin-top:      50px;
+}
+h1,
+.type dt {
+  font-size:       38px;
+  font-weight:     bold;
+  margin-bottom:   20px;
+}
+.type dt {
+  font-size:       26px;
+}
+.type {
+  margin:          5px 0 20px;
+}
+.type dd {
+  margin:          5px 50px;
+}
+.type input:hover,
+.type label:hover {
+  color:           #33b5e5;
+  cursor:          pointer;
+}
+.type input {
+  margin-right:    5px;
+}
+.type input:checked {
+  box-shadow:      0 0 1em #33b5e5;
+}
+.type input:checked + span {
+  font-weight:     bold;
+}
+.coords {
+  margin-bottom:   25px;
+}
+.coords dt {
+  margin:          25px 0 5px;
+}
+.coords dd {
+  display:         inline-block;
+}
+.coords input {
+  width:           80px;
+}
+input,
+button {
+  background:      #000;
+  border:          none;
+  color:           #eee;
+  font-size:       18px;
+  padding:         7px 10px;
+}
+button {
+  background:      #33b5e5;
+  border:          none;
+  border-radius:   7px;
+  color:           #000;
+  cursor:          pointer;
+}
+button:hover {
+  background:      #fff;
+  color:           #000;
+  font-weight:     bold;
+}
+.shape {
+  background:      #33b5e5;
+  height:          30px;
+  position:        absolute;
+  width:           30px;
+}
+.shape.circle {
+  border-radius:   100%;
+}
+.shape.star {
+  background:      no-repeat center/100% url('star.png');
 }
