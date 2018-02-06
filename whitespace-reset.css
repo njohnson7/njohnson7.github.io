@@ -1,6 +1,8 @@
 /* Tantek Celik's Whitepsace Reset --- Author: Tantek Celik, Shane Riley --- Version: (CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0 --- Description: Resets default styling of common browsers to a common base */
+html { box-sizing: border-box; }
+*,*:before,*:after { box-sizing: inherit; }
 ul,ol { list-style: none; }
-h1,h2,h3,h4,h5,h6,pre,code { font-size: 1em; }
+h1,h2,h3,h4,h5,h6,pre,code { font-size: 1em; font-weight: normal; }
 ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,
 fieldset,input,dl,dt,dd,figure,figcaption { margin: 0; padding: 0; }
 a img,:link img,:visited img,fieldset { border: none; }
@@ -9,7 +11,3 @@ header,section,article,nav,footer,hgroup,details,summary,figure,main { display: 
 mark { color: inherit; background: transparent; }
 abbr { border: none; }
 summary::-webkit-details-marker { display: none; }
-/*------------------------------ Custom Styles ------------------------------*/
-html { box-sizing: border-box; }
-*,*:before,*:after { box-sizing: inherit; }
-h1,h2,h3,h4,h5,h6 { font-weight: normal; }

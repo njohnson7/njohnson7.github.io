@@ -14,6 +14,7 @@
     <div class='controls'>
       <a href='#' class='start'>Start</a>
       <a href='#' class='stop'>Stop</a>
+      <a href='#' class='reset'>Reset</a>
       <a href='#' class='clear'>Clear</a>
     </div>
     <form class='add' action='#' method='get'>
@@ -33,11 +34,15 @@
         </dl>
         <dl class='coords'>
           <dt><label for='start-x'>Starting Point</label></dt>
-          <dd><input type='number' placeholder='x:' name='start-x' id='start-x'></dd>
-          <dd><input type='number' placeholder='y:' name='start-y'></dd>
+          <dd><input type='number' name='start-x' placeholder='x:' id='start-x'></dd>
+          <dd><input type='number' name='start-y' placeholder='y:'></dd>
           <dt><label for='end-x'>Ending Point</label></dt>
-          <dd><input type='number' placeholder='x:' name='end-x' id='end-x'></dd>
-          <dd><input type='number' placeholder='y:' name='end-y'></dd>
+          <dd><input type='number' name='end-x' placeholder='x:' id='end-x'></dd>
+          <dd><input type='number' name='end-y' placeholder='y:'></dd>
+        </dl>
+        <dl class='speed'>
+          <dt><label for='speed'>Speed</label></dt>
+          <dd><input type='number' name='speed' placeholder='ms' id='speed'></dd>
         </dl>
       </fieldset>
       <button type='submit'>Add</button>

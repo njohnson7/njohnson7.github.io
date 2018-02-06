@@ -15,7 +15,6 @@ main {
 }
 .canvas {
   background:      linear-gradient(#444, #000);
-  content:         '';
   height:          600px;
   margin:          0 auto;
   position:        relative;
@@ -72,10 +71,12 @@ h1,
 .type input:checked + span {
   font-weight:     bold;
 }
-.coords {
+.coords,
+.speed {
   margin-bottom:   25px;
 }
-.coords dt {
+.coords dt,
+.speed dt {
   margin:          25px 0 5px;
 }
 .coords dd {
@@ -83,6 +84,9 @@ h1,
 }
 .coords input {
   width:           80px;
+}
+.speed input {
+  width:           100px;
 }
 input,
 button {
@@ -115,4 +119,14 @@ button:hover {
 }
 .shape.star {
   background:      no-repeat center/100% url('star.png');
+}
+.shape.star:after {
+  color:           #33b5e5;
+  content:         '\2605';
+  display:         block;
+  font-size:       40px;
+  height:          30px;
+  line-height:     1.15;
+  margin:          -3px;
+  width:           30px;
 }
