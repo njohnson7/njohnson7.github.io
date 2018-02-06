@@ -118,9 +118,9 @@ button:hover {
   border-radius:   100%;
 }
 .shape.star {
-  background:      no-repeat center/100% url('star.png');
+  background:      transparent;
 }
-.shape.star:after {
+.star:after {
   color:           #33b5e5;
   content:         '\2605';
   display:         block;
