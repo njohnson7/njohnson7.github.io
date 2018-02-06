@@ -1,23 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(function () {
   const SHAPE_TYPES = ['shape', 'circle', 'star'];
   const SHAPE_SIZE  = 30;
@@ -71,8 +51,6 @@ $(function () {
     createShape(type, coords).appendTo(this).hide().show('fast');
   };
 
-
-
   $('form').submit(function (e) {
     e.preventDefault();
     $canvas.addShape();
@@ -83,11 +61,6 @@ $(function () {
     e.preventDefault();
     let $control = $(this);
     let $shapes  = $canvas.children().stop();
-
-
-    console.log(42);
-
-
     if      ($control.is('.start')) $shapes.each((_, shape) => shape.move());
     else if ($control.is('.clear')) $shapes.remove();
   });
