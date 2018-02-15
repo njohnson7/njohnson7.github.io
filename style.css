@@ -1,132 +1,88 @@
 @import url('whitespace-reset.css');
-body,
-input,
-button {
-  background:      #000;
-  caret-color:     #15f4ee;
-  color:           #eee;
-  font:            normal 20px Helvetica, Arial, sans-serif;
+body {
+  background:          #000;
+  caret-color:         #15f4ee;
+  color:               #eee;
+  font:                normal 30px Helvetica, Arial, sans-serif;
 }
 main {
-  background:      #151515;
-  margin:          15px auto;
-  padding:         30px;
-  width:           860px;
+  background:          #151515;
+  margin:              15px auto;
+  padding:             30px;
+  width:               1000px;
 }
-.canvas {
-  background:      linear-gradient(#444, #000);
-  height:          600px;
-  margin:          0 auto;
-  position:        relative;
-  width:           800px;
+.tree,
+.apples {
+  height:              800px;
+  margin:              0 auto 60px;
+  width:               800px;
 }
-.controls {
-  margin:          20px 0;
+.tree {
+  background:          url('tree.png');
+}
+.apples {
+  background-image:    url('apples.png');
+  background-position: 100% 0;
+  opacity:             .6;
+}
+.word,
+.guesses {
+  height:              50px;
+  margin-bottom:       20px;
+}
+h1 {
+  display:             inline-block;
+  width:               150px;
+}
+.letter {
+  border-bottom:       3px solid #666;
+  content: '';
+  display:             inline-block;
+  height:              40px;
+  margin-right:        15px;
+  text-align:          center;
+  width:               40px;
+}
+.letter span {
+  visibility:          hidden;
+}
+.message {
+  /*display: none;*/
+  margin-bottom: 40px;
+
+}
+.background-red {
+  background: #821d0f;
+  transition: all 2s ease;
+}
+.background-blue {
+  background: #33b5e5;
+  transition: all 2s ease;
+}
+/*.background-black {
+  background: #000;
+  transition: all 0.5s ease;
+}*/
+.game-over {
+  display: none;
+  margin-bottom: 40px;
+}
+.lose,
+.win {
+  display: none;
+  margin-bottom: 20px;
+}
+.lose {
+  color: #821d0f;
+}
+.win {
+  /*color: #33b5e5;*/
 }
 a {
-  color:           #33b5e5;
+  color: #33b5e5;
   text-decoration: none;
 }
 a:hover {
-  color:           #eee;
-  font-weight:     bold;
-}
-a + a {
-  border-left:     2px solid #555;
-  margin-left:     4px;
-  padding-left:    8px;
-}
-.clear:hover {
-  color:           #ff3232;
-}
-.add {
-  margin-top:      50px;
-}
-h1,
-.type dt {
-  font-size:       38px;
-  font-weight:     bold;
-  margin-bottom:   20px;
-}
-.type dt {
-  font-size:       26px;
-}
-.type {
-  margin:          5px 0 20px;
-}
-.type dd {
-  margin:          5px 50px;
-}
-.type input:hover,
-.type label:hover {
-  color:           #33b5e5;
-  cursor:          pointer;
-}
-.type input {
-  margin-right:    5px;
-}
-.type input:checked {
-  box-shadow:      0 0 1em #33b5e5;
-}
-.type input:checked + span {
-  font-weight:     bold;
-}
-.coords,
-.speed {
-  margin-bottom:   25px;
-}
-.coords dt,
-.speed dt {
-  margin:          25px 0 5px;
-}
-.coords dd {
-  display:         inline-block;
-}
-.coords input {
-  width:           80px;
-}
-.speed input {
-  width:           100px;
-}
-input,
-button {
-  background:      #000;
-  border:          none;
-  color:           #eee;
-  font-size:       18px;
-  padding:         7px 10px;
-}
-button {
-  background:      #33b5e5;
-  border:          none;
-  border-radius:   7px;
-  color:           #000;
-  cursor:          pointer;
-}
-button:hover {
-  background:      #fff;
-  color:           #000;
-  font-weight:     bold;
-}
-.shape {
-  background:      #33b5e5;
-  height:          30px;
-  position:        absolute;
-  width:           30px;
-}
-.shape.circle {
-  border-radius:   100%;
-}
-.shape.star {
-  background:      transparent;
-}
-.star:after {
-  color:           #33b5e5;
-  content:         '\2605';
-  display:         block;
-  font-size:       40px;
-  height:          30px;
-  line-height:     1.15;
-  margin:          -3px;
-  width:           30px;
+  text-decoration: underline;
+  font-weight: bold;
 }

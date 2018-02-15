@@ -1,1 +1,1 @@
-# Test page: Dynamic Animations Project
+# Test page

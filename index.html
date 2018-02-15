@@ -1,52 +1,29 @@
 <!doctype html>
 <html lang='en-US'>
 <head>
-  <title>Dynamic Animations</title>
+  <title>Guess a Word</title>
   <meta charset='utf-8'>
   <link href='style.css' rel='stylesheet'>
-  <script src='jquery-3.2.1.js'></script>
-  <script src='good_functions.js'></script>
+  <script src='../../jquery-3.2.1.js'></script>
+  <script src='../../good_functions.js'></script>
   <script src='script.js'></script>
 </head>
 <body>
   <main>
-    <div class='canvas'></div>
-    <div class='controls'>
-      <a href='#' class='start'>Start</a>
-      <a href='#' class='stop'>Stop</a>
-      <a href='#' class='reset'>Reset</a>
-      <a href='#' class='clear'>Clear</a>
+    <div class='tree'>
+      <div class='apples'></div>
     </div>
-    <form class='add' action='#' method='get'>
-      <h1>Add a shape</h1>
-      <fieldset>
-        <dl class='type'>
-          <dt>Type</dt>
-          <dd>
-            <label><input type='radio' name='type' value='square'><span>Square</span></label>
-          </dd>
-          <dd>
-            <label><input type='radio' name='type' value='circle'><span>Circle</span></label>
-          </dd>
-          <dd>
-            <label><input type='radio' name='type' value='star'><span>Star</span></label>
-          </dd>
-        </dl>
-        <dl class='coords'>
-          <dt><label for='start-x'>Starting Point</label></dt>
-          <dd><input type='number' name='start-x' placeholder='x:' id='start-x'></dd>
-          <dd><input type='number' name='start-y' placeholder='y:'></dd>
-          <dt><label for='end-x'>Ending Point</label></dt>
-          <dd><input type='number' name='end-x' placeholder='x:' id='end-x'></dd>
-          <dd><input type='number' name='end-y' placeholder='y:'></dd>
-        </dl>
-        <dl class='speed'>
-          <dt><label for='speed'>Speed</label></dt>
-          <dd><input type='number' name='speed' placeholder='ms' id='speed'></dd>
-        </dl>
-      </fieldset>
-      <button type='submit'>Add</button>
-    </form>
+    <div class='game-over'>
+      <p class='lose'>Sorry, you're out of guesses!</p>
+      <p class='win'>You win!</p>
+      <a href='#'>Play again</a>
+    </div>
+    <div class='word'>
+      <h1>Word:</h1>
+    </div>
+    <div class='guesses'>
+      <h1>Guesses:</h1>
+    </div>
   </main>
 </body>
 </html>
