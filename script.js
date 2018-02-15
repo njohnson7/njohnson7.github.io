@@ -60,7 +60,7 @@ $(function () {
 
   $document.keypress(function (e) {
     let letter = e.key.toLowerCase();
-    if (!/[a-z]/.test(letter) || guessedLetters.includes(letter) || $('.game-over:visible').length != 0) return;
+    if (!/^[a-z]$/.test(letter) || guessedLetters.includes(letter) || $('.game-over:visible').length != 0) return;
     guessedLetters.push(letter);
     createLetterDiv(letter).appendTo($guesses).find('span').css('visibility', 'visible');
 
