@@ -5,7 +5,7 @@ $(function () {
   const $word     = $('.word');
   const $guesses  = $('.guesses');
   const $gameOver = $('.game-over');
-  const $newGame = $('a');
+  const $newGame  = $('a');
 
   const randomWord = (function () {
     const getRandomSetOfWords = _ => ([
