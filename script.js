@@ -1,92 +1,118 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(function () {
   const $document = $(document);
   const $body     = $(document.body);
-  const $tree     = $('.tree');
   const $apples   = $('.apples');
   const $word     = $('.word');
   const $guesses  = $('.guesses');
   const $gameOver = $('.game-over');
+  const $newGame = $('a');
 
-  const sample = arr => arr.splice(~~(Math.random() * arr.length), 1)[0];
+  const randomWord = (function () {
+    const getRandomSetOfWords = _ => ([
+      ['ivy', 'espionage', 'kayak', 'dwarves', 'bagpipes'],
+      ['blizzard', 'witchcraft', 'banjo', 'icebox', 'cycle'],
+    ][(~~(Math.random() * 2))]);
 
-  const createLetterDiv = letter => $('<div>', {
-    class: 'letter',
-    html: `<span>${letter}</span>`,
-  });
+    let words = getRandomSetOfWords();
+    return _ => words.splice(~~(Math.random() * words.length), 1)[0];
+  }());
 
-  const reset = function () {
-    $gameOver.hide().find('p').hide();
-    $body.removeClass();
-    $word.find('.letter').remove();
-    $guesses.find('.letter').remove();
-    $apples.show().css('backgroundPositionY', 0);
-    guessedLetters = [];
-    wrongCount = 0;
-    if (words.length == 0) {
+  const Game = {
+    MAX_WRONG_COUNT: 6,
+    init() {
+      this.reset();
+      this.word = randomWord();
+      if (!this.word) {
+        this.outOfWords();
+        return;
+      }
+
+      this.guessedLetters = [];
+      this.wrongCount     = 0;
+      this.addLettersToPage();
+      return this;
+    },
+    reset() {
+      $gameOver.hide();
+      $body.removeClass();
+      $('.letter').remove();
+      $apples.show().css('backgroundPositionY', 0);
+    },
+    outOfWords() {
       alert('all out of words!');
       $body.hide(500);
-      return;
-    }
-    currentWord = sample(words);
-    [...currentWord].forEach(letter => createLetterDiv(letter).appendTo($word));
+      $document.off();
+    },
+    createLetter(letter) {
+      return $('<div>', {
+        class: 'letter',
+        html:  `<span>${letter}</span>`,
+      });
+    },
+    addLettersToPage() {
+      [...this.word].forEach(letter => this.createLetter(letter).appendTo($word));
+    },
+    skipGuess(letter) {
+      return !/^[a-z]$/.test(letter)
+        || this.guessedLetters.includes(letter)
+        || $gameOver.is(':visible');
+    },
+    addGuessedLetter(letter) {
+      this.guessedLetters.push(letter);
+      this.createLetter(letter).appendTo($guesses);
+    },
+    showGameOver(msg) {
+      $gameOver.show().find('p').text(msg);
+    },
+    win() {
+      this.showGameOver('You win!');
+      $body.addClass('win');
+      $newGame.trigger('focus');
+    },
+    lose() {
+      this.showGameOver("Sorry, you're out of guesses!");
+      $word.find('span:hidden').addClass('lose').show(600);
+      $body.addClass('lose');
+      $newGame.trigger('focus');
+      $apples.hide();
+    },
+    removeApple() {
+      $apples.css('backgroundPositionY', `${this.wrongCount * 20}%`);
+    },
+    isCorrectLetter(letter) {
+      return this.word.includes(letter);
+    },
+    isAllCorrect() {
+      return [...this.word].every(letter => this.guessedLetters.includes(letter));
+    },
+    showLetter(letter) {
+      $word.find(`span:contains(${letter})`).show();
+    },
+    correct(letter) {
+      this.showLetter(letter);
+      if (this.isAllCorrect()) this.win();
+    },
+    incorrect() {
+      this.wrongCount++;
+      if (this.wrongCount == this.MAX_WRONG_COUNT) this.lose();
+      else this.removeApple();
+    },
+    processGuess(letter) {
+      if (this.skipGuess(letter)) return;
+      this.addGuessedLetter(letter);
+      if (this.isCorrectLetter(letter)) this.correct(letter);
+      else this.incorrect(letter);
+    },
   };
 
-  let words = ['consider', 'minute', 'accord', 'evident', 'practice', 'intend', 'cat'];
-  let currentWord;
-  let guessedLetters;
-  let wrongCount;
-
-  reset();
+  let game;
+  $newGame.click(function (e) {
+    e.preventDefault();
+    game = Object.create(Game).init();
+  }).click();
 
   $document.keypress(function (e) {
     let letter = e.key.toLowerCase();
-    if (!/^[a-z]$/.test(letter) || guessedLetters.includes(letter) || $('.game-over:visible').length != 0) return;
-    guessedLetters.push(letter);
-    createLetterDiv(letter).appendTo($guesses).find('span').css('visibility', 'visible');
-
-    if (currentWord.includes(letter)) {
-      $word.find(`.letter span:contains(${letter})`).css('visibility', 'visible');
-      if ([...currentWord].every(letter => guessedLetters.includes(letter))) {
-        $gameOver.show().find('.win').show(400);
-        $body.addClass('background-blue');
-        $('a').trigger('focus');
-      }
-    } else {
-      wrongCount++;
-      if (wrongCount == 6) {
-        $gameOver.show().find('.lose').show(400);
-        $body.addClass('background-red');
-        $('a').trigger('focus');
-        $apples.hide();
-      } else {
-        $apples.css('backgroundPositionY', `${wrongCount * 20}%`);
-        return;
-      }
-    }
-  });
-
-  $('a').click(function (e) {
-    e.preventDefault();
-    reset();
+    game.processGuess(letter);
   });
 });

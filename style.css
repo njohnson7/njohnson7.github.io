@@ -37,53 +37,45 @@ h1 {
 }
 .letter {
   border-bottom:       3px solid #666;
-  content: '';
+  content:             '';
   display:             inline-block;
   height:              40px;
   margin-right:        15px;
   text-align:          center;
+  vertical-align:      top;
   width:               40px;
 }
 .letter span {
-  visibility:          hidden;
+  text-transform:      uppercase;
 }
-.message {
-  /*display: none;*/
-  margin-bottom: 40px;
-
+.word .letter span {
+  display:             none;
 }
-.background-red {
-  background-color: #821d0f;
-  transition: all 2s ease;
+body.win,
+body.lose {
+  transition:          all 3s ease;
 }
-.background-blue {
-  background-color: #33b5e5;
-  transition: all 2s ease;
+body.win {
+  background-color:    #33b5e5;
 }
-/*.background-black {
-  background: #000;
-  transition: all 0.5s ease;
-}*/
+body.lose {
+  background-color:    #a31400;
+}
 .game-over {
-  display: none;
-  margin-bottom: 40px;
+  display:             none;
+  margin-bottom:       40px;
 }
-.lose,
-.win {
-  display: none;
-  margin-bottom: 20px;
+.msg {
+  margin-bottom:       20px;
 }
-.lose {
-  color: #821d0f;
-}
-.win {
-  /*color: #33b5e5;*/
+.letter span.lose {
+  color:               #8e1605;
 }
 a {
-  color: #33b5e5;
-  text-decoration: none;
+  color:               #33b5e5;
+  text-decoration:     none;
 }
 a:hover {
-  text-decoration: underline;
-  font-weight: bold;
+  font-weight:         bold;
+  text-decoration:     underline;
 }
