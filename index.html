@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang='en-US'>
+<head>
+  <title>Nick Johnson | Software Engineer</title>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,500,900' rel='stylesheet' />
+  <link rel='shortcut icon' type='image/png' href='images/logo.png' />
+  <link rel='stylesheet' href='/css/reset.css' />
+  <link rel='stylesheet' href='/css/main.css' />
+</head>
+
+<body>
+  <header>
+    <h1>Nick Johnson</h1>
+    <nav>
+      <a class='email' href='mailto:njohnson7@pm.me'></a>
+      <a class='linkedin' href='https://www.linkedin.com/in/njohnson07' target='_blank'></a>
+      <a class='github' href='https://github.com/njohnson7' target='_blank'></a>
+      <a class='medium' href='https://hackernoon.com/building-spacecraft-a-real-time-collaborative-repl-deebcf084ed9' target='_blank'></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class='intro'>
+      <div class='image'>
+        <img src='images/portrait.png' />
+      </div>
+      <article>
+        <div class='box'>
+          <h2>Hi, I'm Nick</h2>
+          <p>I'm a software engineer in San Francisco.</p>
+          <p>
+            I'm a cocreator and software engineer of <a href='https://spacecraft-repl.com/' target='_blank'>SpaceCraft</a> &mdash; an open-source, in-browser REPL (Read-Evaluate-Print-Loop) where users can collaborate together in real time.
+          </p>
+          <p><a href='/#more'>More about me</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section class='light' id='project'>
+      <article>
+        <div class='box'>
+          <h4>// Recent Project</h4>
+
+          <img class='mobile' src='images/app-mobile.png' />
+
+          <h2>SpaceCraft</h2>
+          <p>
+            <a href='https://spacecraft-repl.com/' target='_blank'>SpaceCraft</a> is an open-source, real-time, collaborative REPL (Read-Evaluate-Print-Loop) where users can pair-program together without any additional configuration.
+          </p>
+          <p>
+            SpaceCraft is built using a Node.js server that manages REPL code evaluation and connects multiple clients through WebSockets. SpaceCraft is deployed with Docker and scaled to handle multiple user sessions using a reverse proxy server.
+          </p>
+          <p>
+            <a href='http://repl.space' target='_blank'>Try the demo here</a>.
+          </p>
+
+          <a href='https://spacecraft-repl.com/whitepaper' target='_blank'>
+            <button>View case study</button>
+          </a>
+        </div>
+      </article>
+      <div id='app'>
+        <img src='images/app.png' />
+      </div>
+    </section>
+
+    <section class='divider'><article></article></section>
+
+    <section class='light' id='other-projects'>
+      <article>
+        <div class='box first'>
+          <h4>// Other Projects</h4>
+          <h2>SpaceCraft: <br class='mobile' />Proxy Server</h2>
+          <img class='full' src='images/demo-2.gif' />
+          <p>I built a reverse proxy server from scratch, using Node.js and the Docker API, that integrates with <a href='https://spacecraft-repl.com' target='_blank'>SpaceCraft</a>. The proxy server manages multiple user sessions, initializes containers, and forwards clients' requests to the appropriate containers.</p>
+
+          <a href='https://spacecraft-repl.com/whitepaper#62-solution-a-reverse-proxy' target='_blank'>
+            <button>Read more</button>
+          </a>
+          <div class='spacing'></div>
+        </div>
+      </article>
+      <article>
+        <div class='box last'>
+          <h4 class='placeholder'>_</h4>
+
+          <h2>Myflix</h2>
+          <p>A video subscription application, similar to Netflix.</p>
+
+          <h2>Postit</h2>
+          <p>A social news and discussion application, similar to Reddit.</p>
+
+          <h2>Ticket Tracker</h2>
+          <p>An application that manages tickets by tracking issues and changes. I optimized the SQL ticket count time complexity by reducing it from O(N) down to O(1).</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <article id='more'>
+      <div class='box'>
+        <h2>More About Me</h2>
+        <p>I'm a full-stack software engineer looking for new opportunities.</p> 
+        <p>I have years of experience with Ruby, JavaScript, and Linux, and am proficient in Node.js, WebSockets, Docker, Rails, React, Bash, SQL, DevOps, and RESTful APIs.</p>
+        <p>
+          Fun Fact: I love solving code challenges and I'm <a href='https://www.codewars.com/users/njohnson7' target='_blank'>ranked among the Top 100 users on Codewars</a>.
+        </p>
+        <a href='/resume/nickjohnson.pdf' target='_blank'>
+          <button>Resume</button>
+        </a>
+      </div>
+    </article>
+    <article id='info'>
+      <div class='box'>
+        <h2>Nick Johnson</h2>
+        <h4>// San Francisco</h4>
+        <h2>Let's Connect</h2>
+        <p><a href='mailto:njohnson7@pm.me'>njohnson7@pm.me</a></p>
+        <nav>
+          <a class='linkedin' href='https://linkedin.com/in/njohnson07' target='_blank'></a>
+          <a class='github' href='https://github.com/njohnson7' target='_blank'></a>
+          <a class='medium' href='https://hackernoon.com/building-spacecraft-a-real-time-collaborative-repl-deebcf084ed9' target='_blank'></a>
+        </nav>
+      </div>
+    </article>
+    <small>
+      Design by
+      <a class='designer-link' href='https://www.instagram.com/linzimurray.creative/' target='_blank'>linzimurray.creative</a>
+    </small>
+  </footer>
+</body>
+</html>
