@@ -278,6 +278,7 @@ Nick Johnson	_site/index.html	/^    <h1>Nick Johnson<\/h1>$/;"	h
 Nick Johnson	index.html	/^        <h2>Nick Johnson<\/h2>$/;"	i
 Nick Johnson	index.html	/^    <h1>Nick Johnson<\/h1>$/;"	h
 Nick Johnson's Website	README.md	/^# Nick Johnson's Website$/;"	c
+Nick Johnson's Website	_site/README.md	/^# Nick Johnson's Website$/;"	c
 Postit	_site/index.html	/^          <h2>Postit<\/h2>$/;"	i
 Postit	index.html	/^          <h2>Postit<\/h2>$/;"	i
 SpaceCraft	_site/index.html	/^          <h2>SpaceCraft<\/h2>$/;"	i
