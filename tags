@@ -50,21 +50,18 @@
 #other-projects h2:not(:first-of-type)	_site/css/main.css	/^#other-projects h2:not(:first-of-type) {$/;"	s
 #other-projects h2:not(:first-of-type)	css/main.css	/^#other-projects h2:not(:first-of-type) {$/;"	s
 #player	_site/css/main.css	/^#player {$/;"	i
-#player	css/main.css	/^#player {$/;"	i
 #presentation	_site/css/main.css	/^  #presentation {$/;"	i
 #presentation	_site/css/main.css	/^#presentation {$/;"	i
 #presentation	css/main.css	/^  #presentation {$/;"	i
-#presentation	css/main.css	/^#presentation {$/;"	i
 #presentation .box	_site/css/main.css	/^  #presentation .box {$/;"	c
 #presentation .box	_site/css/main.css	/^#presentation .box {$/;"	c
 #presentation .box	css/main.css	/^  #presentation .box {$/;"	c
-#presentation .box	css/main.css	/^#presentation .box {$/;"	c
 #presentation article	_site/css/main.css	/^  #presentation article {$/;"	s
 #presentation article	_site/css/main.css	/^#presentation article {$/;"	s
 #presentation article	css/main.css	/^  #presentation article {$/;"	s
-#presentation article	css/main.css	/^#presentation article {$/;"	s
 #project	_site/css/main.css	/^  #project {$/;"	i
 #project	css/main.css	/^  #project {$/;"	i
+#project	css/main.css	/^#project {$/;"	i
 #project .box	_site/css/main.css	/^  #project .box {$/;"	c
 #project .box	_site/css/main.css	/^#project .box {$/;"	c
 #project .box	css/main.css	/^  #project .box {$/;"	c
@@ -248,7 +245,6 @@
 .player-wrapper	_site/css/main.css	/^  .player-wrapper {$/;"	c
 .player-wrapper	_site/css/main.css	/^.player-wrapper {$/;"	c
 .player-wrapper	css/main.css	/^  .player-wrapper {$/;"	c
-.player-wrapper	css/main.css	/^.player-wrapper {$/;"	c
 .project-name	_site/assets/css/style.css	/^.project-name { margin-top: 0; margin-bottom: 0.1rem; }$/;"	c
 .project-name	_site/assets/css/style.css	/^@media screen and (max-width: 42em) { .project-name { font-size: 1.75rem; } }$/;"	c
 .project-name	_site/assets/css/style.css	/^@media screen and (min-width: 42em) and (max-width: 64em) { .project-name { font-size: 2.25rem; /;"	c
@@ -557,6 +553,7 @@ main p:last-of-type	_site/css/main.css	/^main p:last-of-type,$/;"	s
 main p:last-of-type	css/main.css	/^main p:last-of-type,$/;"	s
 main section	_site/css/main.css	/^main section,$/;"	s
 main section	css/main.css	/^main section,$/;"	s
+main section.intro	css/main.css	/^main section.intro {$/;"	c
 mark	_site/assets/css/style.css	/^mark { background: #ff0; color: #000; }$/;"	s
 mark	_site/css/reset.css	/^time, mark, audio, video {$/;"	s
 mark	css/reset.css	/^time, mark, audio, video {$/;"	s

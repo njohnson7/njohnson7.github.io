@@ -104,9 +104,10 @@ footer {
 }
 
 .intro img {
+  border-radius: 1000px;
   display: block;
-  height: 50vw;
-  width: 50vw;
+  height: 25vw;
+  width: 25vw;
 }
 
 h2 img {
@@ -245,29 +246,6 @@ main article {
 
 strong {
   font-weight: 500;
-}
-
-#presentation {
-  display: flex;
-  flex-direction: row;
-}
-
-#presentation .box {
-  margin-left: 10%;
-  width: 55%;
-}
-
-#presentation article {
-  flex: 1;
-  background-color: #030c15;
-}
-
-#player {
-  height: 100%;
-}
-
-.player-wrapper {
-  flex: 2;
 }
 
 /* Footer */
@@ -501,4 +479,12 @@ footer small a {
 
 .divider {
   height: 2px;
+}
+
+#project {
+  border-bottom: 2px solid #030c15;
+}
+
+main section.intro {
+  background-color: #030c15;
 }
