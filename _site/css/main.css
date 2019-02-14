@@ -60,7 +60,7 @@ footer h2 {
   margin-bottom: 18px;
   font-size: 45px;
   font-weight: 500;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 main p,
@@ -106,8 +106,8 @@ footer {
 .intro img {
   border-radius: 1000px;
   display: block;
-  height: 25vw;
-  width: 25vw;
+  height: 50vw;
+  width: 50vw;
 }
 
 h2 img {
@@ -271,7 +271,7 @@ footer {
 #info .box {
   width: 100%;
   padding-left: 25%;
-  border-left: 1px solid #ffffff;  
+  border-left: 1px solid #ffffff;
 }
 
 footer h2 {
@@ -312,7 +312,7 @@ footer small a {
 
   br.mobile {
     display: block;
-  }  
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -321,6 +321,7 @@ footer small a {
     height: 100%;
     width: 40vw;
     object-fit: cover;
+    border-radius: 0;
   }
 
   .intro .box {
@@ -342,7 +343,7 @@ footer small a {
   }
 
   #app {
-    display: none; 
+    display: none;
   }
 
   header > h1 {
@@ -392,7 +393,7 @@ footer small a {
   }
 
   #other-projects article {
-    padding: 20px 0; 
+    padding: 20px 0;
   }
 
   .box.first, .box.last {
@@ -457,6 +458,7 @@ footer small a {
 
   .intro img {
     width: 100vw;
+    border-radius: 1000px;
   }
 
   .intro .box {
