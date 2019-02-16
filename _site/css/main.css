@@ -43,6 +43,7 @@ nav a:hover {
 a.email { background-image: url("/images/email.png"); }
 a.linkedin { background-image: url("/images/linkedin.png"); }
 a.github { background-image: url("/images/github.png"); }
+a.codewars { background-image: url("/images/codewars.png"); }
 a.medium { background-image: url("/images/medium.png"); }
 
 .placeholder {

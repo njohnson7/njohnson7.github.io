@@ -285,6 +285,8 @@ a	_site/css/reset.css	/^a {$/;"	s
 a	_site/css/reset.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
 a	css/reset.css	/^a {$/;"	s
 a	css/reset.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+a.codewars	_site/css/main.css	/^a.codewars { background-image: url("\/images\/codewars.png"); }$/;"	c
+a.codewars	css/main.css	/^a.codewars { background-image: url("\/images\/codewars.png"); }$/;"	c
 a.email	_site/css/main.css	/^a.email { background-image: url("\/images\/email.png"); }$/;"	c
 a.email	css/main.css	/^a.email { background-image: url("\/images\/email.png"); }$/;"	c
 a.github	_site/css/main.css	/^a.github { background-image: url("\/images\/github.png"); }$/;"	c
